@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+{% include 'partials/_menu.html' %}
+{% include 'partials/_busca.html' %}
+{% include 'partials/_logo.html' %}
+<div>
+    <hr class="linha__segundo">
+</div>
+{% include 'partials/_alertas.html' %}
+<section class="cadastro">
+    <div class="cadastro__container">
+        <form action="{% url 'cadastro' %} " method="POST">
+            {% csrf_token %}
+            <div class="cadastro__colunas">
+                <label  class="cadastro__input--label"><b>Nome completo</b></label>
+                <div class="cadastro__colunas--div">
+                    <input type="text" class="cadastro__coluna--input" name="nome" placeholder="Ex.:Albino Gomes" required>
+                </div>
+                <label  class="cadastro__input--label"><b>Email</b></label>
+                <div class="cadastro__colunas--div">
+                    <input type="email" class="cadastro__coluna--input" name="email" placeholder="Ex.: albino@hotmail.com"
+                        required>
+                </div>
+                <label class="cadastro__input--label"><b>Senha</b></label>
+                <div class="cadastro__colunas--div">
+                    <input type="password" class="cadastro__coluna--input" name="senha" placeholder="Digite sua senha" required>
+                </div>
+                <label  class="cadastro__input--label"><b>Confirmação de senha</b></label>
+                <div class="cadastro__colunas--div">
+                    <input type="password" class="cadastro__coluna--input" name="senha2"
+                        placeholder="Digite sua senha mais uma vez" required>
+                </div>
+            </div>
+            <div class="cadastro__colunas--botao">
+                <button class="botao__cadastarar--logar" type="submit">Criar sua conta</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% include 'partials/_footer.html' %}
+{% endblock %}

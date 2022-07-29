@@ -1,0 +1,45 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+ {% include 'partials/_menu.html' %}
+  {% include 'partials/_busca.html' %}
+    {% include 'partials/_logo.html' %}
+    <div>
+        <hr class="linha__segundo">
+    </div>
+    <section class="noticias">
+
+        {% if noticias %}
+        {% for noticia in noticias %}
+        <div class="noticia__foto">
+            <a class="noticia__titulo" href="{% url 'noticia' noticia.id %}">
+                {% if noticia.foto_noticia == '' %}
+                <div class="noticia__foto">
+                    <img class="noticia__foto--jornal" src="{% static 'img/slack.png' %}" alt="">
+                </div>
+                {% else %}
+                <div class="noticia__titulo">
+                    <img class="noticia__foto--jornal" src="{{ noticia.foto_noticia.url }}" alt="">
+                    {% endif %}
+                    <h3 class="noticia__titulo--tema">{{ noticia.titulo_noticia }}</h3>
+            </a>
+        </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div>
+            <p>Noticia não encontarada!!!</p>
+        </div>
+        {% endif %}
+    
+    </section>
+    {% include 'partials/_footer.html' %}
+    {% endblock %}
+
+
+
+

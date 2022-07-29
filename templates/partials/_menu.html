@@ -1,0 +1,20 @@
+
+ {% load static %}
+    <header class="cabecalho">
+        <nav class="menu">
+            <img class="logo" src="{% static 'img/logo.jpg' %}" alt="Logo">
+            <ul class="menu__lista">
+                {% if user.is_authenticated %}
+                <li class="menu__item"><a class="menu__link" href="{% url 'index' %}">Página principal</a></li>
+                <li class="menu__item"><a class="menu__link" href="{% url 'dashboard' %}">Minhas Noticias</a></li>
+                <li class="menu__item"><a class="menu__link" href="{% url 'cria_noticia' %}">Cria noticia</a></li>
+                <li class="menu__item"><a class="menu__link" href="{% url 'login' %}">Logout</a></li>
+                {% else %}
+                <li class="menu__item"><a class="menu__link" href="{% url 'index' %}">Página principal</a></li>
+                <li class="menu__item"><a class="menu__link" href="{% url 'cadastro' %}">Cadastro</a></li>
+                <li class="menu__item"><a class="menu__link" href="{% url 'login' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+

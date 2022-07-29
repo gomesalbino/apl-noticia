@@ -1,0 +1,10 @@
+
+{% load static %}
+<hr class="linha">
+<section class="sobre">
+    <form action="{% url 'buscar' %}" class="sobre">
+        {% csrf_token %}
+        <input class="sobre__pesquisas" type="text"  name="buscar" placeholder="Pesquise aqui ...">
+        <button class="sobre__potao--pesquisar" type="submit">Pesquisar</button>
+    </form>
+</section>

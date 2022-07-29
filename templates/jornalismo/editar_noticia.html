@@ -1,0 +1,53 @@
+
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+ {% include 'partials/_menu.html' %}
+  {% include 'partials/_busca.html' %}
+    {% include 'partials/_logo.html' %}
+    <div>
+        <hr class="linha__segundo">
+    </div>
+
+    <section class="noticia">
+        <div class="noticia__div">
+            <form action="{% url 'atualiza_noticia' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="text" id="noticia_id" class="form-control" name="noticia_id" value="{{noticia.id}}" hidden>
+                <div class="noticia__div">
+                    <label class="noticia__div--titulo"><b>Título da noticia</b></label>
+                    <div class="noticia__div--container">
+                        <input type="text" id="titulo_noticia" class="noticia__div--input" name="titulo_noticia"
+                            placeholder="Ex. Noticias de ultimas horas" value="{{ noticia.titulo_noticia }}" required>
+                    </div>
+                    <label class="noticia__div--titulo"><b>Materia</b></label>
+                    <div class="noticia__div--container">
+                        <textarea class="noticia__div--materia" name="materias" cols="85" rows="10"
+                            placeholder="Ex. ensira o texto da noticia aqui... &#10;200ml de água" required>{{noticia.materias}}</textarea>
+                    </div>
+                
+                    <label class="noticia__div--titulo"><b>Foto</b></label>
+                    <div class="noticia__div--container">
+                       <img class="noticia__div--foto" src="{{ noticia.foto_noticia.url }}" alt="">
+                    </div>
+                    <label class="noticia__div--titulo"><b> Nova foto</b></label>
+                    <div class="noticia__div--container">
+                        <input type="file" class="noticia__divfot--foto" id="foto_noticia" name="foto_noticia" required>
+                    </div>
+                   
+                </div>
+                <div class="noticia__div--botao">
+                    <button class="noticia__botao--cria" type="submit">Atualizar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+   
+{% include 'partials/_footer.html' %}
+{% endblock %}
+
+

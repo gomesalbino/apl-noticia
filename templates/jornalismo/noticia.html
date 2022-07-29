@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+ {% include 'partials/_menu.html' %}
+  {% include 'partials/_busca.html' %}
+    {% include 'partials/_logo.html' %}
+    <div>
+        <hr class="linha__segundo">
+    </div>
+
+   {% include 'partials/noticia/_imagem.html' %}
+    <section class="materia_de_noticia">
+        <div class="titulo__texto">
+            <div class="materia__titulo">
+                <h2 class="materia__titulo--noticias">{{ noticia.titulo_noticia }}</h2>
+            </div>
+            <div class="materia__texto">
+                <p class="materia__texto--noticias">{{ noticia.materias }}</p>
+            </div>
+        </div>
+    </section>
+   
+{% include 'partials/_footer.html' %}
+{% endblock %}
+

@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2? família=Tajawal:wght@300&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>AG | Noticias</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cabecalho/logo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/corpo/body-pagina.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cabecalho/cabecalho.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cabecalho/menu-links.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cabecalho/menu-lista.css' %}">
+    <link rel="stylesheet" href="{% static 'css/destaque/destaque.css' %}">
+    <link rel="stylesheet" href="{% static 'css/pesquisa/sobre-botao-pesquisas.css' %}">
+    <link rel="stylesheet" href="{% static 'css/pesquisa/sobre-pesquisas.css' %}">
+    <link rel="stylesheet" href="{% static 'css/destaque/destaque-ag.css' %}">
+    <link rel="stylesheet" href="{% static 'css/destaque/destaque-link--ag.css' %}">
+    <link rel="stylesheet" href="{% static 'css/destaque/destaque-link.css' %}">
+    <link rel="stylesheet" href="{% static 'css/linhas/linhas.css' %}">
+    <link rel="stylesheet" href="{% static 'css/linhas/linhas-segundo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/noticias/noticias.css' %}">
+    <link rel="stylesheet" href="{% static 'css/noticias/noticias-titulo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/noticias/noticia-coluna-div.css' %}">
+    <link rel="stylesheet" href="{% static 'css/noticias/noticia-foto-jornal.css' %}">
+    <link rel="stylesheet" href="{% static 'css/noticias/responsivenoticias/noticia-mediaquery.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cabecalho/responsive/media-query.css' %}">
+    <link rel="stylesheet" href="{% static 'css/pesquisa/responsivepesq/medias-query.css' %}">
+    <link rel="stylesheet" href="{% static 'css/noticias/responsivenoticias/noticias-mediaquery.css' %}">
+    <link rel="stylesheet" href="{% static 'css/linhas/responsives.css' %}">
+    <link rel="stylesheet" href="{% static 'css/destaque/responsive/media-query-responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/rodape/autor/direito-autorais.css' %}">
+    <link rel="stylesheet" href="{% static 'css/rodape/responsive/media-query-rodape.css' %}">
+    <link rel="stylesheet" href="{% static 'css/conteudo/rais/rais-materia.css' %}">
+    <link rel="stylesheet" href="{% static 'css/conteudo/imagem/materia-noticias.css' %}">
+    <link rel="stylesheet" href="{% static 'css/conteudo/imagem/materia-noticias-imagem.css' %}">
+    <link rel="stylesheet" href="{% static 'css/conteudo/titulo/materia-titulo-noticia.css' %}">
+    <link rel="stylesheet" href="{% static 'css/conteudo/titulo/titulo-texto.css' %}">
+    <link rel="stylesheet" href="{% static 'css/conteudo/texto/materia-texto-noticias.css' %}">
+    <link rel="stylesheet" href="{% static 'css/conteudo/texto/materia-texto.css' %}">
+    <link rel="stylesheet" href="{% static 'css/conteudo/imagem/responsive/media-query-responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/conteudo/texto/responsive/responsives-texto.css' %}">
+    <link rel="stylesheet" href="{% static 'css/conteudo/titulo/responsive/media-query-titulo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cadastro/cadastro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cadastro/cadastro-container.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cadastro/cadastro-colunas.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cadastro/cadastro-colunas-divs.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cadastro/cadastro-coluna-input.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cadastro/cadastro-inputs-label.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cadastro/cadastro-coluna-botao.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cadastro/responsive/medias-query-cadastro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard/deletar-noticia.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard/editares-noticias.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard/mediaquery/media-query-botao.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cria-noticia/noticia.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cria-noticia/noticia-div.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cria-noticia/noticia-div-titulo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cria-noticia/noticia-div-materias.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cria-noticia/noticia-div-input.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cria-noticia/noticia-div-fotos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cria-noticia/noticia-div-container.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cria-noticia/noticia-div-botao-cria.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cria-noticia/responsive/medias-query-cria-noticia.css' %}">
+
+
+</head>
+
+<body class="corpo-pagina">
+
+    {% block content %} {% endblock %}
+
+
+</body>
+
+</html>

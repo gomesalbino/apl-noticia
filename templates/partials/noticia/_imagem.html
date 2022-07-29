@@ -1,0 +1,19 @@
+
+{% load static %}
+
+ <section class="materia">
+    <div class="materia__jornal">
+        <div class="materia__noticias">
+            {% if noticia.foto_noticia == '' %}
+            <img class="materia__noticias--imagem" src="{% static 'img/slack.png' %}" alt="Foto do jornal">
+            {% else %}
+            <img class="materia__noticias--imagem" src="{{ noticia.foto_noticia.url }}" alt="Foto do jornal">
+            {% endif %}
+            <div class="materia__por">
+                <span class="materia__noticias--data">{{ noticia.data_noticia }}</span>
+                <h5 class="materia__noticias--pessoa">Por: {{ noticia.pessoa }}</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
